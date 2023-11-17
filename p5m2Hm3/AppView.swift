@@ -14,11 +14,11 @@ class AppView{
         return label
     }
     
-    func getImage(name: UIImage) -> UIImageView {
+    func getImage(name: String) -> UIImageView {
         let img = UIImageView()
-        img.image = name
+        img.image = UIImage(named: name)
         img.contentMode = .scaleAspectFit
-        img.layer.cornerRadius = 40
+        img.layer.cornerRadius = 20
 //        img.layer.cornerRadius = img.frame.size.width / 2
         img.clipsToBounds = true
         img.translatesAutoresizingMaskIntoConstraints = false

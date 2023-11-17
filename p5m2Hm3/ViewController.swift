@@ -40,7 +40,8 @@ class ViewController: UIViewController {
     
     func setView(){
         // фото аватара
-        let avatarImg = appView.getImage(name: UIImage(named: "Image-80")!)
+        let avatarImg = appView.getImage(name: "Image-80")
+        avatarImg.layer.cornerRadius = 40
         view.addSubview(avatarImg)
         NSLayoutConstraint.activate([
             avatarImg.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -88,11 +89,9 @@ class ViewController: UIViewController {
             photoAcountOwner.topAnchor.constraint(equalTo: viewAbout.bottomAnchor, constant: 53),
             photoAcountOwner.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 41)
         ])
-        let leftImg = appView.getImage(name: UIImage(named: "Rectangle 2")!)
-        leftImg.layer.cornerRadius = 20
+        let leftImg = appView.getImage(name: "Rectangle 2")
         
-        let rightImg = appView.getImage(name: UIImage(named: "Rectangle 3")!)
-        rightImg.layer.cornerRadius = 20
+        let rightImg = appView.getImage(name: "Rectangle 3")
         
         view.addSubview(stackPhoto)
         stackPhoto.addArrangedSubview(leftImg)
